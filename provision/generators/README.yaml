@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: base-template
+name: ansible-role-template
 
 email:
   support: support@hadenlabs.com
@@ -17,22 +17,22 @@ email:
 license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: hadenlabs/base-template
+github_repo: hadenlabs/ansible-role-template
 
 # Badges to display
 badges:
   - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/base-template?label=latest&sort=semver
-    url: https://github.com/hadenlabs/base-template/releases
+    image: https://img.shields.io/github/v/tag/hadenlabs/ansible-role-template?label=latest&sort=semver
+    url: https://github.com/hadenlabs/ansible-role-template/releases
   - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/base-template
-    url: https://github.com/hadenlabs/base-template/releases
+    image: https://img.shields.io/github/release/hadenlabs/ansible-role-template
+    url: https://github.com/hadenlabs/ansible-role-template/releases
   - name: Lint
-    image: https://img.shields.io/github/workflow/status/hadenlabs/base-template/lint-code
-    url: https://github.com/hadenlabs/base-template/actions
+    image: https://img.shields.io/github/workflow/status/hadenlabs/ansible-role-template/lint-code
+    url: https://github.com/hadenlabs/ansible-role-template/actions
   - name: Issues
-    image: https://img.shields.io/github/issues/hadenlabs/base-template
-    url: https://github.com/hadenlabs/base-template/issues
+    image: https://img.shields.io/github/issues/hadenlabs/ansible-role-template
+    url: https://github.com/hadenlabs/ansible-role-template/issues
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
@@ -40,15 +40,15 @@ badges:
     image: https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735
     url: https://keepachangelog.com
   - name: Beacon
-    image: https://ga-beacon.appspot.com/G-MZEK48EGE8/base-template/readme
-    url: https://github.com/hadenlabs/base-template
+    image: https://ga-beacon.appspot.com/G-MZEK48EGE8/ansible-role-template/readme
+    url: https://github.com/hadenlabs/ansible-role-template
 
 description: |-
 
-  base-template for project
+  ansible-role-template for project
 
   ### Replace name project to New Project
 
   ```bash
-    agr 'base-template' 'new-project'
+    agr 'ansible-role-template' 'new-project'
   ```
