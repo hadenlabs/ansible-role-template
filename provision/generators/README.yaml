@@ -21,9 +21,6 @@ github_repo: hadenlabs/ansible-role-template
 
 # Badges to display
 badges:
-  - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/ansible-role-template?label=latest&sort=semver
-    url: https://github.com/hadenlabs/ansible-role-template/releases
   - name: Latest Release
     image: https://img.shields.io/github/release/hadenlabs/ansible-role-template
     url: https://github.com/hadenlabs/ansible-role-template/releases
