@@ -1,0 +1,10 @@
+---
+# task file for hadenlabs.ansible-role-template
+
+- name: Add PPA for role_name.
+  apt_repository:
+    repo: 'ppa:role_name/{{ _role_name_ppa_version }}'
+    state: present
+    update_cache: true
+  register: role_name_ppa_added
+  when: _role_name_ppa_use
