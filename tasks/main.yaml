@@ -1,0 +1,38 @@
+---
+# task for hadenlabs.ansible-role-template
+
+- include: include_vars.yml
+
+- include: apps.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: dependences.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: files.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: host.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: pip.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: configure.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: install.yaml
+  when:
+    - role_name_only_deploy == False
+
+- include: templates.yaml
+
+- include: environment.yaml
+
+- include: post_install.yaml

@@ -1,0 +1,10 @@
+---
+# task file for hadenlabs.ansible-role-template
+
+- name: copy templates
+  template:
+    src: '{{ item.template }}'
+    dest: '{{ item.path  }}'
+  with_items: '{{ _role_name_templates | default({}) }}'
+  when:
+    - _role_name_templates is defined

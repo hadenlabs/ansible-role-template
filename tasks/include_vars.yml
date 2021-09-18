@@ -1,0 +1,14 @@
+---
+# task for hadenlabs.ansible-role-template
+
+- name: include os specific variables
+  include_vars: '{{ item }}'
+  with_first_found:
+    - '{{ ansible_distribution }}.yaml'
+    - '{{ ansible_os_family }}.yaml'
+    - 'main.yaml'
+
+- name: Define role_name_user.
+  set_fact:
+    role_name_user: '{{ __role_name_user }}'
+  when: role_name_user is not defined

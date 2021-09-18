@@ -1,0 +1,38 @@
+---
+# task for hadenlabs.ansible-role-template
+
+- name: Ensure role_name_vhost_path exists.
+  become: yes
+  file:
+    path: '{{ _role_name_vhost_path }}'
+    state: directory
+  notify: reload role_name
+
+- name: Add managed vhost config file (if any vhosts are configured).
+  become: yes
+  template:
+    src: default.conf.j2
+    dest: '{{ _role_name_vhost_path }}/{{ role_name_vhosts_filename }}'
+    mode: 0644
+  when: role_name_vhosts|length > 0
+  notify: reload role_name
+
+- name: Remove managed vhost config file (if no vhosts are configured).
+  become: yes
+  file:
+    path: '{{ _role_name_vhost_path }}/{{ role_name_vhosts_filename }}'
+    state: absent
+  when: role_name_vhosts|length == 0
+  notify: reload role_name
+
+# role_name setup.
+- name: Copy role_name configuration in place.
+  become: yes
+  template:
+    src: role_name.conf.j2
+    dest: '{{ _role_name_conf_file_path }}'
+    owner: root
+    group: '{{ _root_group }}'
+    mode: 0644
+  notify:
+    - reload role_name

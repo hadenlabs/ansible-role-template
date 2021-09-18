@@ -1,0 +1,4 @@
+---
+# vars file for hadenlabs.ansible-role-template (Ubuntu specific)
+
+_root_group: root
