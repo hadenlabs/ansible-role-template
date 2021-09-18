@@ -56,7 +56,7 @@ requirements: |-
 # How to use this project
 usage: |-
   ```bash
-    ansible-galaxy install hadenlabs.nginx
+    ansible-galaxy install hadenlabs.ansible-role-template
     agr 'ansible-role-template' 'new-project'
   ```
 
@@ -66,5 +66,4 @@ examples:
   - 'docs/examples/common.md'
 
 include:
-  - 'docs/include/targets.md'
   - 'docs/include/ansible.md'
