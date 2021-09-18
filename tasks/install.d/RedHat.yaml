@@ -1,0 +1,14 @@
+---
+- name: Enable role_name repo.
+  template:
+    src: role_name.repo.j2
+    dest: /etc/yum.repos.d/role_name.repo
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Ensure role_name is installed.
+  yum:
+    name: '{{ _role_name_package_name }}'
+    state: installed
+    enablerepo: role_name

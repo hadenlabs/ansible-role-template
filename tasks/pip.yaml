@@ -1,0 +1,9 @@
+---
+# task for hadenlabs.ansible-role-template
+
+- name: Install packages via pip role_name
+  become: true
+  pip: name="{{ item.name }}" version="{{ item.version }}"
+  when:
+    - _role_name_pip_packages is defined
+  with_items: '{{ _role_name_pip_packages | default({}) }}'
