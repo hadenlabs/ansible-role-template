@@ -1,21 +1,13 @@
 <!-- Space: AnsibleRoleTemplate -->
 <!-- Parent: Project -->
-<!-- Title: Troubleshooting -->
+<!-- Title: Env Vars -->
 
 <!-- Label: AnsibleRoleTemplate -->
 <!-- Label: Project -->
-<!-- Label: Troubleshooting -->
+<!-- Label: Env Vars -->
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
 
-# Troubleshooting
+---
 
-## Environment
-
-### Wrong pre-commit with pipenv
-
-Execute the next:
-
-```{.bash}
-task environment
-```
+## Env Vars
