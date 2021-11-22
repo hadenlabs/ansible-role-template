@@ -57,6 +57,7 @@ usage: |-
   ```bash
     ansible-galaxy install hadenlabs.ansible-role-template
     agr 'ansible-role-template' 'new-project'
+    agr 'AnsibleRoleTemplate' 'NewProject'
   ```
 
   Full working examples can be found in [examples](./examples) folder.
