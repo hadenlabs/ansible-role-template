@@ -10,6 +10,10 @@ name: ansible-role-template
 email:
   support: support@hadenlabs.com
 
+confluence:
+  space: AnsibleRoleTemplate
+  title: Project
+
 # Logo for this project
 #logo: docs/logo.png
 
@@ -45,13 +49,8 @@ requirements: |-
 
   This is a list of applications that need to be installed previously to enjoy all the goodies of this configuration:
 
-  - [Pyenv](https://github.com/pyenv/pyenv)
-  - [Docker](https://www.docker.com/)
-
-  or
-
-  - [zsh-pyenv](https://github.com/luismayta/zsh-pyenv)
-  - [zsh-docker](https://github.com/hadenlabs/zsh-docker)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
 
 # How to use this project
 usage: |-
