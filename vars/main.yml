@@ -1,20 +1,8 @@
 ---
-# vars file for role_name
+# vars file for ansible-role-name
 
 _root_group: root
-__role_name_user: 'www-data'
-_role_name_package_name: 'role_name'
-_role_name_packages:
+_ansible-role-name_packages:
   - software-properties-common
   - python-software-properties
   - wget
-
-# Use the official role_name PPA for Ubuntu, and the version to use if so.
-_role_name_ppa_use: true
-_role_name_ppa_version: stable
-
-_role_name_templates:
-  - template: 'etc/role_name/conf.d/gzip.conf.j2'
-    path: '{{ _role_name_conf_path }}/gzip.conf'
-  - template: 'etc/role_name/mime.types.j2'
-    path: '{{ _role_name_mime_file_path }}'

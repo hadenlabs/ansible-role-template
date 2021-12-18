@@ -1,21 +1,11 @@
 ---
-# task file for hadenlabs.ansible-role-template
-
-- name: Update package repositories
-  apt:
-    update_cache: True
-  become: true
-  when: ansible_pkg_mgr == "apt"
-  tags:
-    - apt
-    - update_cache
-    - install
-
-- name: Install role_name package dependencies
+- name: Install ansible-role-name package dependencies
   become: true
   package: name={{ item }} state=present
-  with_items: '{{ _role_name_packages | default([]) }}'
-  register: install_role_name_packages
-  when: _role_name_packages is defined
+  with_items: '{{ _ansible-role-name_packages | default([]) }}'
+  register: install_ansible-role-name_packages
+  when: _ansible-role-name_packages is defined
   tags:
     - install
+    - apt
+    - update_cache
