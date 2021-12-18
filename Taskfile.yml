@@ -12,6 +12,7 @@ includes:
   mark: ./provision/task/mark.yml
   prettier: ./provision/task/prettier.yml
   sonar: ./provision/task/sonar.yml
+  molecule: ./provision/task/molecule.yml
   diagrams: ./provision/diagrams/Taskfile.yml
 
 env:
@@ -78,7 +79,6 @@ tasks:
       - git:check
       - gitflow:check
       - docs:check
-      - sonar:check
 
   readme:
     run: once
@@ -111,3 +111,8 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: python:environment
+
+  test:
+    desc: test all
+    cmds:
+      - task: molecule:test
