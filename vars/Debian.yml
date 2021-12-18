@@ -1,2 +1,8 @@
 ---
+# vars file for ansible-role-name
+
 _root_group: root
+_ansible-role-name_packages:
+  - software-properties-common
+  - python-software-properties
+  - wget

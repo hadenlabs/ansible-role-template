@@ -1,15 +1,2 @@
 ---
-- include: install.d/RedHat.yaml
-  when:
-    - ansible_os_family == "RedHat"
-
-- include: install.d/Ubuntu.yaml
-  when:
-    - ansible_os_family == 'Debian'
-
-- name: Ensure role_name is installed.
-  package:
-    name: '{{ _role_name_package_name }}'
-    state: latest
-  notify:
-    - restart role_name
+- include_tasks: 'install.d/{{ansible_os_family | lower }}.yml'
