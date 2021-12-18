@@ -1,0 +1,23 @@
+version: '3'
+
+tasks:
+  check:
+    desc: Exist molecule and dependences
+    run: once
+    deps:
+      - task: check:molecule
+
+  check:molecule:
+    desc: Exist module molecule
+    run: once
+    preconditions:
+      - sh: test "pipenv run command -v molecule"
+        msg: 'Please Install molecule'
+
+  test:
+    desc: run test molecule.
+    run: once
+    cmds:
+      - pipenv run molecule test
+    deps:
+      - task: check
