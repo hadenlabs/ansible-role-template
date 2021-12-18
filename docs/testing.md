@@ -10,4 +10,8 @@
 
 ## Running tests
 
+```bash
+pipenv run molecule test
+```
+
 ## Running tests Syntax
