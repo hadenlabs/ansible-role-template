@@ -7,6 +7,10 @@
 # Name of this project
 name: ansible-role-template
 
+# Tags of this project
+tags:
+  - ansible
+
 email:
   support: support@hadenlabs.com
 
@@ -37,27 +41,27 @@ badges:
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
-  - name: KeepAChangelog
-    image: https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735
-    url: https://keepachangelog.com
-
-# Short description of this project
-description: |-
-  ansible-role-template for hadenlabs.
 
 requirements: |-
 
   This is a list of applications that need to be installed previously to enjoy all the goodies of this configuration:
 
+  - [gomplate](https://github.com/hairyhenderson/gomplate)
   - [python](https://www.python.org)
   - [taskfile](https://github.com/go-task/task)
+
+# Short description of this project
+description: |-
+
+  ansible-role-template for hadenlabs.
 
 # How to use this project
 usage: |-
   ```bash
-    ansible-galaxy install hadenlabs.ansible-role-template
+    ansible-galaxy install hadenlabs.ansible-role-name
     agr 'ansible-role-template' 'new-project'
     agr 'AnsibleRoleTemplate' 'NewProject'
+    agr 'ansible-role-name' 'project'
   ```
 
   Full working examples can be found in [examples](./examples) folder.
