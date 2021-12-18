@@ -1,6 +1,12 @@
 <!-- Space: AnsibleRoleTemplate -->
 <!-- Parent: Project -->
-<!-- Title: Authors -->
+<!-- Title: Project Authors -->
+
+<!-- Label: AnsibleRoleTemplate -->
+<!-- Label: Project -->
+<!-- Label: Authors -->
+<!-- Include: docs/disclaimer.md -->
+<!-- Include: ac:toc -->
 
 # Authors
 
