@@ -5,7 +5,7 @@ dependencies:
   # if you add dependencies to this list.
 
 galaxy_info:
-  ansible-role-name: ansible-role-name
+  role_name: ansible-role-name
   namespace: hadenlabs
   author: hadenlabs
   description: ansible role ansible-role-name
