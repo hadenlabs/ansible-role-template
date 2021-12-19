@@ -8,5 +8,10 @@
       apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
-  roles:
-    - role: hadenlabs.ansible-role-name
+  vars:
+    user: ubuntu
+
+  tasks:
+    - name: 'Include ansible-role-template'
+      include_role:
+        name: 'ansible-role-template'
