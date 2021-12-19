@@ -1,10 +1,15 @@
 ---
+- name: Update apt cache.
+  apt: update_cache=yes cache_valid_time=600
+  when: ansible_os_family == 'Debian'
+
 - name: Install ansible-role-name package dependencies
+  ansible.builtin.package:
+    name: '{{ ansible-role-name_packages }}'
+    state: present
   become: true
-  package: name={{ item }} state=present
-  with_items: '{{ _ansible-role-name_packages | default([]) }}'
   register: install_ansible-role-name_packages
-  when: _ansible-role-name_packages is defined
+  when: ansible-role-name_packages is defined
   tags:
     - install
     - apt

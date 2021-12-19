@@ -1,32 +1,42 @@
 ---
-- include: include_vars.yml
+- name: Include vars by operating system.
+  import_tasks: include_vars.yml
 
-- include: dependences.yaml
+- name: Install dependencies
+  import_tasks: dependences.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: apps.yaml
+- name: Install Or Update Applications
+  import_tasks: apps.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: files.yaml
+- name: Install Or Update files
+  import_tasks: files.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: host.yaml
+- name: Install Or Update host
+  import_tasks: host.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: configure.yaml
+- name: implement configure
+  import_tasks: configure.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: install.yaml
+- name: Implement task install
+  import_tasks: install.yml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
-- include: templates.yaml
+- name: Implement task templates
+  import_tasks: templates.yml
 
-- include: environment.yaml
+- name: Implement task environment
+  import_tasks: environment.yml
 
-- include: post_install.yaml
+- name: Implement task post install
+  import_tasks: post_install.yml
