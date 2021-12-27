@@ -1,6 +1,6 @@
 <!-- Space: AnsibleRoleTemplate -->
 <!-- Parent: Project -->
-<!-- Title: Releasing -->
+<!-- Title: Project Releasing -->
 
 <!-- Label: AnsibleRoleTemplate -->
 <!-- Label: Project -->

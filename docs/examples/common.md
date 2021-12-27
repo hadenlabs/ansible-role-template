@@ -6,7 +6,7 @@
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
 
-### basic
+## basic
 
 To run this playbook with default settings, create a basic playbook like this:
 
