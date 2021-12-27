@@ -9,7 +9,7 @@ galaxy_info:
   namespace: hadenlabs
   author: hadenlabs
   description: ansible role ansible-role-name
-  company: Hadenlabs
+  company: hadenlabs
   version: 0.0.0
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
