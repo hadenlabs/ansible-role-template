@@ -2,14 +2,15 @@ version: '3'
 
 includes:
   changelog: ./provision/task/changelog.yml
+  confluence: ./provision/task/confluence.yml
   python: ./provision/task/python.yml
   git: ./provision/task/git.yml
   docs: ./provision/task/docs.yml
   docker: ./provision/task/docker.yml
-  plantuml: ./provision/task/plantuml.yml
   gitflow: ./provision/task/gitflow.yml
   version: ./provision/task/version.yml
   mark: ./provision/task/mark.yml
+  plantuml: ./provision/task/plantuml.yml
   prettier: ./provision/task/prettier.yml
   sonar: ./provision/task/sonar.yml
   molecule: ./provision/task/molecule.yml
