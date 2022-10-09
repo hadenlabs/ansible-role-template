@@ -19,7 +19,7 @@
 
 # ansible-role-template
 
-ansible-role-template for hadenlabs.
+ansible-role-template for infosisglobal
 
 ## Requirements
 
@@ -29,24 +29,47 @@ This is a list of applications that need to be installed previously to enjoy all
 - [python](https://www.python.org)
 - [taskfile](https://github.com/go-task/task)
 
+## Usage
+
+# How to use this project
+
+```bash
+ansible-galaxy install hadenlabs.ansible-role-name
+agr 'ansible-role-template' 'new-project'
+agr 'AnsibleRoleTemplate' 'NewProject'
+agr 'ansible-role-name' 'project'
+```
+
+Full working examples can be found in [examples](./examples) folder.
+
 ## Examples
 
-<!-- Space: AnsibleRoleTemplate -->
-<!-- Parent: Project -->
-<!-- Title: Project Examples -->
-
+<!-- Space: Projects -->
+<!-- Parent: AnsibleRoleTemplate -->
+<!-- Title: Examples AnsibleRoleTemplate -->
 <!-- Label: Examples -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
-## basic
+## packages
 
-To run this playbook with default settings, create a basic playbook like this:
+To run this playbook with default settings, for install package like this:
 
-```{.yaml}
-- hosts: servers
+generate file `requirements.yml`
+
+```yaml
+- name: hadenlabs.ansible-role-template
+  src: git+https://github.com/hadenlabs/ansible-role-template
+  version: /main
+```
+
+```yaml
+- hosts: all
   roles:
-    - hadenlabs.ansible-role-name
+    - role: hadenlabs.ansible-role-template
+      become: true
+      vars:
+        ansible-role-template_owner: ubuntu
 ```
 
 ## Requirements
