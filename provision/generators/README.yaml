@@ -56,18 +56,10 @@ requirements: |-
 # Short description of this project
 description: |-
 
-  ansible-role-template for hadenlabs.
+  ansible-role-template for infosisglobal
 
-# How to use this project
-usage: |-
-  ```bash
-    ansible-galaxy install hadenlabs.ansible-role-name
-    agr 'ansible-role-template' 'new-project'
-    agr 'AnsibleRoleTemplate' 'NewProject'
-    agr 'ansible-role-name' 'project'
-  ```
-
-  Full working examples can be found in [examples](./examples) folder.
+usages:
+  - docs/usage.md
 
 examples:
   - 'docs/examples/common.md'
