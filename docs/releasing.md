@@ -1,11 +1,10 @@
-<!-- Space: AnsibleRoleTemplate -->
-<!-- Parent: Project -->
-<!-- Title: Project Releasing -->
-
+<!-- Space: Projects -->
+<!-- Parent: AnsibleRoleTemplate -->
+<!-- Title: Releasing AnsibleRoleTemplate -->
 <!-- Label: AnsibleRoleTemplate -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # Releasing
