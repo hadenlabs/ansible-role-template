@@ -1,3 +1,11 @@
+<!-- Space: Projects -->
+<!-- Parent: AnsibleRoleTemplate -->
+<!-- Title: Security AnsibleRoleTemplate -->
+<!-- Label: AnsibleRoleTemplate -->
+<!-- Label: Security -->
+<!-- Include: docs/disclaimer.md -->
+<!-- Include: ac:toc -->
+
 # Security Policy
 
 ## Reporting a Security Bug
