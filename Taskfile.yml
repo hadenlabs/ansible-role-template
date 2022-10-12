@@ -9,7 +9,6 @@ includes:
   docs: ./provision/task/docs.yml
   docker: ./provision/task/docker.yml
   version: ./provision/task/version.yml
-  mark: ./provision/task/mark.yml
   plantuml: ./provision/task/plantuml.yml
   prettier: ./provision/task/prettier.yml
   sonar: ./provision/task/sonar.yml
@@ -51,6 +50,7 @@ vars:
     TMP_CHANGELOG.md
     .task
     *.lock.hcl
+    .external_modules
 
 tasks:
   default:
@@ -98,6 +98,13 @@ tasks:
     desc: Execute prettier files
     cmds:
       - task: prettier:all
+
+  upgrade:
+    run: once
+    desc: Execute upgrade packages
+    cmds:
+      - >-
+        pipenv run pre-commit autoupdate
 
   setup:
     desc: Setup dependences of project
