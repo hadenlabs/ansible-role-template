@@ -4,6 +4,9 @@ exclude: >
   (?x)^(
     ^(\/|)vendor\/(.*?)$|
     .+\.node_modules\/.*$|
+    .+\.external_modules.*$|
+    .+\.terraform.*$|
+    .+\.venv.*$|
     .+\.lock$|
   )$
 
@@ -63,7 +66,12 @@ repos:
       - id: markdown-link-check
         args:
           - --config=.ci/linters/markdown-link-config.json
-        exclude: \.tpl.md$
+        exclude: >
+          (?x)^(
+            docs\/include\/terraform.md$|
+            .+\.tpl.md$|
+          )$
+
       - id: shellcheck
         exclude: >
           (?x)^(
@@ -78,10 +86,6 @@ repos:
         args:
           - --fix
           - --config=.ci/linters/.golangci.yml
-      - id: terraform-docs
-        args:
-          - '--output-file=docs/include/terraform.md'
-          - '--output-mode=replace'
 
       - id: terraform-tflint
         args:
