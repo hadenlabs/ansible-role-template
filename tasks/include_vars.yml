@@ -1,9 +1,9 @@
 ---
 - name: include os specific variables
-  include_vars: '{{ansible_os_family | lower }}.yml'
+  include_vars: "{{ansible_os_family | lower }}.yml"
   with_first_found:
-    - '{{ ansible_os_family | lower }}.yml'
-    - 'main.yml'
+    - "{{ ansible_os_family | lower }}.yml"
+    - "main.yml"
   tags:
-    - 'ansible-role-name'
-    - 'ansible-role-name-vars'
+    - "ansible-role-name"
+    - "ansible-role-name-vars"

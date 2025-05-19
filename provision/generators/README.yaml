@@ -22,7 +22,7 @@ confluence:
 #logo: docs/logo.png
 
 # License of this project
-license: 'LGPL-3.0'
+license: "LGPL-3.0"
 
 # Canonical GitHub repo
 github_repo: hadenlabs/ansible-role-template
@@ -62,7 +62,7 @@ usages:
   - docs/usage.md
 
 examples:
-  - 'docs/examples/common.md'
+  - "docs/examples/common.md"
 
 include:
-  - 'docs/include/ansible.md'
+  - "docs/include/ansible.md"

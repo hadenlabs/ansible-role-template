@@ -12,6 +12,6 @@
     user: ubuntu
 
   tasks:
-    - name: 'Include ansible-role-template'
+    - name: "Include ansible-role-template"
       include_role:
-        name: 'ansible-role-template'
+        name: "ansible-role-template"

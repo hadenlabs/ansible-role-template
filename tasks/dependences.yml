@@ -5,7 +5,7 @@
 
 - name: Install ansible-role-name package dependencies
   ansible.builtin.package:
-    name: '{{ ansible-role-name_packages }}'
+    name: "{{ ansible-role-name_packages }}"
     state: present
   become: true
   register: install_ansible-role-name_packages

@@ -9,7 +9,7 @@ task test
 ## Running tests
 
 ```bash
-pipenv run molecule test
+uv run molecule test
 ```
 
 ## Running tests Syntax
