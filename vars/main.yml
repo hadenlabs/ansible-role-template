@@ -1,8 +1,57 @@
 ---
 # vars file for ansible-role-name
+ansible-role-name_versions:
+  12:
+    package_name: "ansible-role-name"
 
-_root_group: root
-_ansible-role-name_packages:
-  - software-properties-common
-  - python-software-properties
-  - wget
+ubuntu_versions:
+  18:
+    dependences:
+      - python-pip
+      - python3-pip
+      - python3-psycopg2
+      - apt-transport-https
+      - acl
+      - python3-software-properties
+      - curl
+      - ca-certificates
+      - software-properties-common
+    pip_packages:
+      - boto3
+  20:
+    dependences:
+      - python3-pip
+      - python3-psycopg2
+      - apt-transport-https
+      - acl
+      - python3-software-properties
+      - curl
+      - ca-certificates
+      - software-properties-common
+    pip_packages:
+      - boto3
+  22:
+    dependences:
+      - python-pip
+      - python3-pip
+      - python3-psycopg2
+      - apt-transport-https
+      - acl
+      - python3-software-properties
+      - curl
+      - ca-certificates
+      - software-properties-common
+    pip_packages:
+      - boto3
+  24:
+    dependences:
+      - python3-minimal
+      - python3-pip
+      - python3-psycopg2
+      - python3-boto3
+      - apt-transport-https
+      - acl
+      - python3-software-properties
+      - curl
+      - ca-certificates
+      - software-properties-common

@@ -1,0 +1,8 @@
+---
+- include_tasks: "debian/core.yml"
+
+- include_tasks: "rules.yml"
+
+- name: Include installation tasks based on ubuntu version
+  include_tasks: "install.d/ubuntu/{{ ubuntu_version }}.yml"
+  when: ubuntu_version | int in ubuntu_versions.keys()

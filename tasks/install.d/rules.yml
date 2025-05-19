@@ -1,0 +1,9 @@
+- name: Fail if ubuntu version is not supported
+  fail:
+    msg: "Unsupported ubuntu version {{ ubuntu_version }}. Supported versions are {{ ubuntu_versions.keys() }}"
+  when: (ubuntu_version | int) not in (ubuntu_versions.keys() | map('int') | list)
+
+- name: Fail if ansible-role-name version is not supported
+  fail:
+    msg: "Unsupported ansible-role-name version {{ ansible-role-name_version }}. Supported versions are {{ ansible-role-name_versions.keys() }}"
+  when: ansible-role-name_version not in ansible-role-name_versions.keys()

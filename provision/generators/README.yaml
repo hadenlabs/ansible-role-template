@@ -58,8 +58,9 @@ description: |-
 
   ansible-role-template for infosisglobal
 
+# How to use this project
 usages:
-  - docs/usage.md
+  - docs/usage/main.md
 
 examples:
   - "docs/examples/common.md"

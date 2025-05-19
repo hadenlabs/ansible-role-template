@@ -13,6 +13,22 @@
 
 ## Taskfile
 
+### SSH
+
+#### Make Export
+
+```bash
+task ssh:make:export STAGE=core
+```
+
+### Sops
+
+#### Make
+
+```bash
+task sops:make
+```
+
 ### Molecule
 
 #### Test Molecule

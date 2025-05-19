@@ -1,0 +1,5 @@
+- name: Configure ansible-role-name
+  block:
+    - name: update cache
+      apt:
+        update_cache: yes

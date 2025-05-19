@@ -1,8 +1,0 @@
----
-- name: copy templates
-  template:
-    src: "{{ item.template }}"
-    dest: "{{ item.path  }}"
-  with_items: "{{ _ansible-role-name_templates | default({}) }}"
-  when:
-    - _ansible-role-name_templates is defined

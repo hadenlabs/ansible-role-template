@@ -11,7 +11,13 @@ keywords = []
 authors = [{ name = "Luis Mayta", email = "luis@hadenlabs.com" }]
 repository = "https://github.com/hadenlabs/ansible-role-template"
 
-dependencies = ["boto3>=1.26.130"]
+dependencies = [
+  "ansible<2.15.3",
+  "ansible-core<2.15.3",
+  "boto3>=1.26.130",
+  "molecule-plugins",
+  "molecule-ec2",
+]
 
 [project.urls]
 Source = "https://github.com/hadenlabs/ansible-role-template"
@@ -173,3 +179,23 @@ commit_args = ""
 filename = "sonar-project.properties"
 search = 'sonar.projectVersion={current_version}'
 replace = 'sonar.projectVersion={new_version}'
+
+[[tool.bumpversion.files]]
+filename = "package.json"
+search = '"version": "{current_version}"'
+replace = '"version": "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "docs/usage/main.md"
+search = 'version: {current_version}'
+replace = 'version: {new_version}'
+
+[[tool.bumpversion.files]]
+filename = "docs/examples/common.md"
+search = 'ref={current_version}'
+replace = 'ref={new_version}'
+
+[[tool.bumpversion.files]]
+filename = "meta/main.yml"
+search = 'version: {current_version}'
+replace = 'version: {new_version}'

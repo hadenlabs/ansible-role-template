@@ -1,0 +1,38 @@
+- name: Set vars
+  block:
+    - name: Get Ubuntu major version
+      set_fact:
+        ubuntu_version: "{{ ansible_distribution_major_version | int }}"
+      when: ansible_distribution_major_version is defined
+
+    - name: Check type after conversion
+      debug:
+        msg: "Type of ubuntu_version after conversion: {{ (ubuntu_version | int) | type_debug }}"
+
+    - name: Debug Ubuntu version and valid versions
+      debug:
+        msg:
+          - "Ubuntu version provided: {{ ubuntu_version }}"
+          - "Valid Ubuntu versions: {{ ubuntu_versions.keys() | map('int') | list }}"
+
+    - name: Check type of ubuntu_version
+      debug:
+        msg: "Type of ubuntu_version: {{ ubuntu_version | type_debug }}"
+
+    - name: Debug Validation Check
+      debug:
+        msg: "Condition result: {{ ubuntu_version not in (ubuntu_versions.keys() | map('int') | list) }}"
+
+    - name: Validate Ubuntu version
+      fail:
+        msg: "Unsupported Ubuntu version: {{ ubuntu_version }}"
+      when: (ubuntu_version | int) not in (ubuntu_versions.keys() | map('int') | list)
+
+    - name: set vars for packages by ubuntu
+      set_fact:
+        ansible-role-name_dependences: "{{ ubuntu_versions[ubuntu_version | int ].dependences }}"
+
+    - name: set vars for packages by ansible-role-name
+      set_fact:
+        ansible-role-name_package_name: "{{ ansible-role-name_versions[ansible-role-name_version].package_name }}"
+        ansible-role-name_pip_packages: "{{ ansible-role-name_versions[ansible-role-name_version].pip_packages | default([]) }}"

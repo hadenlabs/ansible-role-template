@@ -1,0 +1,14 @@
+---
+- name: Configure and Install ansible-role-name
+  block:
+    - name: Install ansible-role-name
+      apt:
+        name: "{{ ansible-role-name_package_name }}"
+        state: present
+        update_cache: yes
+
+    - name: Ensure ansible-role-name service is running
+      service:
+        name: "{{ ansible-role-name_service_name }}"
+        state: started
+        enabled: yes

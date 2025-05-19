@@ -5,6 +5,14 @@
 <!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
+## Common
+
+### Install Dependencies
+
+```bash
+task setup
+```
+
 ## packages
 
 To run this playbook with default settings, for install package like this:
@@ -19,6 +27,7 @@ generate file `requirements.yml`
 
 ```yaml
 - hosts: all
+
   roles:
     - role: hadenlabs.ansible-role-template
       become: true

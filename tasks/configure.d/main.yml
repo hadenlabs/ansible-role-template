@@ -1,0 +1,3 @@
+- name: Include configure tasks based on ubuntu version
+  include_tasks: "ubuntu/{{ ubuntu_version }}.yml"
+  when: ubuntu_version | int in ubuntu_versions.keys()
