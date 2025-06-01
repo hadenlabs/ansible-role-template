@@ -2,18 +2,17 @@
 # https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 [project]
 name = "ansible-role-template"
-description = "base template"
+description = "ansible-role-template"
 version = "0.0.0"
 license = "LGPL-3.0"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 keywords = []
 authors = [{ name = "Luis Mayta", email = "luis@hadenlabs.com" }]
 repository = "https://github.com/hadenlabs/ansible-role-template"
 
 dependencies = [
-  "ansible<2.15.3",
-  "ansible-core<2.15.3",
+  "ansible==11.5.0",
   "boto3>=1.26.130",
   "molecule-plugins",
   "molecule-ec2",
@@ -199,3 +198,8 @@ replace = 'ref={new_version}'
 filename = "meta/main.yml"
 search = 'version: {current_version}'
 replace = 'version: {new_version}'
+
+[[tool.bumpversion.files]]
+filename = "provision/generators/README.yaml"
+search = 'badge/version-{current_version}'
+replace = 'badge/version-{new_version}'
