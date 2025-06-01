@@ -4,12 +4,11 @@ ansible-role-name_versions:
   12:
     package_name: "ansible-role-name"
 
-ubuntu_versions:
+ansible-role-name_ubuntu_versions:
   18:
     dependences:
       - python-pip
       - python3-pip
-      - python3-psycopg2
       - apt-transport-https
       - acl
       - python3-software-properties
@@ -21,7 +20,6 @@ ubuntu_versions:
   20:
     dependences:
       - python3-pip
-      - python3-psycopg2
       - apt-transport-https
       - acl
       - python3-software-properties
@@ -34,7 +32,6 @@ ubuntu_versions:
     dependences:
       - python-pip
       - python3-pip
-      - python3-psycopg2
       - apt-transport-https
       - acl
       - python3-software-properties
@@ -47,7 +44,6 @@ ubuntu_versions:
     dependences:
       - python3-minimal
       - python3-pip
-      - python3-psycopg2
       - python3-boto3
       - apt-transport-https
       - acl

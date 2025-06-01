@@ -13,7 +13,7 @@
       debug:
         msg:
           - "Ubuntu version provided: {{ ubuntu_version }}"
-          - "Valid Ubuntu versions: {{ ubuntu_versions.keys() | map('int') | list }}"
+          - "Valid Ubuntu versions: {{ ansible-role-name_ubuntu_versions.keys() | map('int') | list }}"
 
     - name: Check type of ubuntu_version
       debug:
@@ -21,18 +21,18 @@
 
     - name: Debug Validation Check
       debug:
-        msg: "Condition result: {{ ubuntu_version not in (ubuntu_versions.keys() | map('int') | list) }}"
+        msg: "Condition result: {{ ubuntu_version not in (ansible-role-name_ubuntu_versions.keys() | map('int') | list) }}"
 
     - name: Validate Ubuntu version
       fail:
         msg: "Unsupported Ubuntu version: {{ ubuntu_version }}"
-      when: (ubuntu_version | int) not in (ubuntu_versions.keys() | map('int') | list)
+      when: (ubuntu_version | int) not in (ansible-role-name_ubuntu_versions.keys() | map('int') | list)
 
     - name: set vars for packages by ubuntu
       set_fact:
-        ansible-role-name_dependences: "{{ ubuntu_versions[ubuntu_version | int ].dependences }}"
+        ansible-role-name_dependences: "{{ ansible-role-name_ubuntu_versions[ubuntu_version | int ].dependences }}"
 
-    - name: set vars for packages by ansible-role-name
+    - name: set vars for packages by ansible-role-name_ubuntu
       set_fact:
-        ansible-role-name_package_name: "{{ ansible-role-name_versions[ansible-role-name_version].package_name }}"
-        ansible-role-name_pip_packages: "{{ ansible-role-name_versions[ansible-role-name_version].pip_packages | default([]) }}"
+        ansible-role-name_package_name: "{{ ansible-role-name_ubuntu_versions[ansible-role-name_ubuntu_version].package_name }}"
+        ansible-role-name_pip_packages: "{{ ansible-role-name_ubuntu_versions[ansible-role-name_ubuntu_version].pip_packages | default([]) }}"

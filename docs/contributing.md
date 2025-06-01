@@ -12,7 +12,7 @@ Contributions to ansible-role-template are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to ansible-role-template repositories on [GitHub](https://github.com/hadenlabs/ansible-role-template). See [Git flow](./contribute/github-flow.md).
+- Contribute to ansible-role-template repositories on [GitHub](https://github.com/hadenlabs/ansible-role-template). See [GitHub flow](./contribute/github-flow.md).
 
 ## Getting Started
 
